@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --bgcolor:rgba(255, 255, 255, 0.623);
+    --left:0%;
+    --width:100%;
+}
+body{
+    height: 100vh;
+    background: url(forest.jpg) no-repeat ;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:#01010188;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: -6rem;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: var(--left);
+    width:var(--width);
+    height: 2%;
+    background-color:var(--bgcolor);
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.container >h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    top: -2rem;
+    font-family: 'Azeret Mono', monospace;
+}
+
+ul{
+    display: flex;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    list-style-type:none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.bigtext{
+    font-size: 2rem;  
+    margin:0 3rem;
+}
+
+.style{
+    background: rgba(92, 86, 84, 0.507);
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+}
